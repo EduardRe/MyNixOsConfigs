@@ -112,6 +112,8 @@
     git
   	gparted
   	home-manager
+    # jdk24
+    jetbrains.jdk-no-jcef-17
   	jetbrains.phpstorm
   	unstable.sublime4
   	mission-center
