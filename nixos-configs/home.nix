@@ -22,4 +22,14 @@
 			hmswitch = "home-manager switch --flake ${config.home.homeDirectory}/nixos-configs";
 		};
 	};
+
+	# nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
+    #    "phpstorm-with-plugins"
+    #    "phpstorm"
+    # ];
+
+	# Установка плагинов для PhpStorm
+    # home.packages = with pkgs; [
+    #    (jetbrains.plugins.addPlugins jetbrains.phpstorm [ "Key Promoter X" ])
+    # ];
 }
