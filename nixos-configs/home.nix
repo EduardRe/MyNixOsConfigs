@@ -13,6 +13,9 @@
     	"org/gnome/desktop/input-sources" = {
       		xkb-options = ["grp:alt_shift_toggle"];
     	};
+    	"org/gnome/desktop/wm/preferences" = {
+            button-layout = ":minimize,maximize,close";
+        };
   	};
 	
 	programs.bash = {
