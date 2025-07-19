@@ -111,6 +111,8 @@
   environment.systemPackages = with pkgs; [
     git
   	gparted
+  	neofetch
+  	libreoffice
   	home-manager
     # jdk24
     jetbrains.jdk-no-jcef-17
