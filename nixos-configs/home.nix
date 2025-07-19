@@ -20,6 +20,7 @@
 		shellAliases = {
 			rebild = "sudo nixos-rebuild switch --flake ${config.home.homeDirectory}/nixos-configs";
 			hmswitch = "home-manager switch --flake ${config.home.homeDirectory}/nixos-configs";
+			nixupdate = "nix flake update --flake ${config.home.homeDirectory}/nixos-configs";
 		};
 	};
 
