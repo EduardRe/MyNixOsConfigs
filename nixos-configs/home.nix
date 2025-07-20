@@ -11,16 +11,20 @@
   home.packages = with pkgs; [
     gnomeExtensions.dash-to-panel
     gnomeExtensions.just-perfection
+    gnomeExtensions.gtk4-desktop-icons-ng-ding
   ];
 
-  # Настройка GNOME: раскладки, кнопки окон, Dash to Panel и скрытие верхней панели
+  # Настройка GNOME: раскладки, кнопки окон, Dash to Panel, NumLock и скрытие верхней панели
   dconf.settings = {
+    # Раскладки клавиатуры
     "org/gnome/desktop/input-sources" = {
       xkb-options = ["grp:alt_shift_toggle"];
     };
+    # Кнопки в заголовках окон
     "org/gnome/desktop/wm/preferences" = {
       button-layout = ":minimize,maximize,close";
     };
+    # Включение NumLock
     "org/gnome/settings-daemon/peripherals/keyboard" = {
       numlock-state = true;
       remember-numlock-state = true;
@@ -30,6 +34,7 @@
       enabled-extensions = [
         "dash-to-panel@jderose9.github.com"
         "hidetopbar@mathieu.bidon.ca"
+        "gtk4-ding@smedius.gitlab.com"
       ];
     };
     # Настройка Dash to Panel
@@ -59,6 +64,11 @@
     # Скрытие верхней панели GNOME
     "org/gnome/shell/extensions/just-perfection" = {
       panel = false;
+    };
+    "org/gnome/shell/extensions/gtk4-ding" = {
+      dark-text-in-labels = false;
+      icon-size = "small";
+      show-volumes = false;
     };
   };
 
