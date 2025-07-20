@@ -15,13 +15,15 @@
 
   # Настройка GNOME: раскладки, кнопки окон, Dash to Panel и скрытие верхней панели
   dconf.settings = {
-    # Раскладки клавиатуры
     "org/gnome/desktop/input-sources" = {
       xkb-options = ["grp:alt_shift_toggle"];
     };
-    # Кнопки в заголовках окон
     "org/gnome/desktop/wm/preferences" = {
       button-layout = ":minimize,maximize,close";
+    };
+    "org/gnome/settings-daemon/peripherals/keyboard" = {
+      numlock-state = true;
+      remember-numlock-state = true;
     };
     # Включение расширений
     "org/gnome/shell" = {
