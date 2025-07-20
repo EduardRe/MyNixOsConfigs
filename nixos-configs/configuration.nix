@@ -43,7 +43,15 @@
     LC_TELEPHONE = "ru_RU.UTF-8";
     LC_TIME = "ru_RU.UTF-8";
   };
-  
+
+  # Включение NumLock в GDM
+  services.xserver.displayManager.gdm.settings = {
+    "org/gnome/settings-daemon/peripherals/keyboard" = {
+      numlock-state = true;
+      remember-numlock-state = true;
+    };
+  };
+
   # Flatpak
   services.flatpak.enable = true;
 

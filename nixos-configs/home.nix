@@ -16,6 +16,11 @@
     	"org/gnome/desktop/wm/preferences" = {
             button-layout = ":minimize,maximize,close";
         };
+        # Включение NumLock
+        "org/gnome/settings-daemon/peripherals/keyboard" = {
+          numlock-state = true;
+          remember-numlock-state = true;
+        };
   	};
 	
 	programs.bash = {
