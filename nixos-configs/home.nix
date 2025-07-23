@@ -12,6 +12,7 @@
     gnomeExtensions.dash-to-panel
     gnomeExtensions.just-perfection
     gnomeExtensions.gtk4-desktop-icons-ng-ding
+    gnomeExtensions.pano
   ];
 
   # Настройка GNOME: раскладки, кнопки окон, Dash to Panel, NumLock и скрытие верхней панели
@@ -29,12 +30,17 @@
       numlock-state = true;
       remember-numlock-state = true;
     };
+    # Отключение Super+V для уведомлений
+    "org/gnome/shell/keybindings" = {
+      toggle-message-tray = [""];
+    };
     # Включение расширений
     "org/gnome/shell" = {
       enabled-extensions = [
         "dash-to-panel@jderose9.github.com"
         "hidetopbar@mathieu.bidon.ca"
         "gtk4-ding@smedius.gitlab.com"
+        "pano@elhan.io"
       ];
     };
     # Настройка Dash to Panel
@@ -69,6 +75,11 @@
       dark-text-in-labels = false;
       icon-size = "small";
       show-volumes = false;
+    };
+    # Настройка Pano
+    "org/gnome/shell/extensions/pano" = {
+      global-shortcut = ["<Super>v"];
+      history-length = 500;
     };
   };
 
