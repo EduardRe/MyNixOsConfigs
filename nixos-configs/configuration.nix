@@ -131,6 +131,8 @@
   	jetbrains.phpstorm
   	unstable.sublime4
   	mission-center
+  	gimp3
+  	obs-studio
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
   ];
